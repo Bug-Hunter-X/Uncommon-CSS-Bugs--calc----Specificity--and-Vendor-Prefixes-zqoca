@@ -1,0 +1,27 @@
+/* Solution: Addressing the CSS Bugs */
+
+/* Solution for calc(): Ensure parent element has a defined width */
+#parent {
+  width: 500px; /* Or a percentage of the viewport width */
+}
+
+#element {
+  width: calc(100% - 20px);
+}
+
+/* Solution for specificity issues: Use more specific selectors or !important (use sparingly!) */
+.container .element {
+  color: blue; /* More specific than .element */
+}
+
+.element {
+  color: red;
+}
+
+/* Solution for missing vendor prefixes: Add prefixes for broader browser support */
+.element {
+  display: -webkit-flex; /* For older WebKit browsers */
+  display: flex; /* Standard display flex */
+  -webkit-transition: all 0.3s ease; /* For older WebKit browsers */
+  transition: all 0.3s ease; /* Standard transition */
+} 
